@@ -7,7 +7,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint -c .eslintrc.js index.js",
-    "start": "MEDIASOUP_LISTEN_IP=94.130.170.229 MEDIASOUP_ANNOUNCED_IP=94.130.170.229 DEBUG=${DEBUG:='*mediasoup* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} node index.js"
+    "start": "MEDIASOUP_LISTEN_IP=94.130.170.229 MEDIASOUP_ANNOUNCED_IP=94.130.170.229 DEBUG=${DEBUG:='*mediasoup* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} node index.js",
+    "prod": "MEDIASOUP_LISTEN_IP=94.130.170.229 MEDIASOUP_ANNOUNCED_IP=94.130.170.229 HTTPS_CERT_FULLCHAIN=/etc/letsencrypt/live/smartexpo.bitallium.com/fullchain.pem HTTPS_CERT_PRIVKEY=/etc/letsencrypt/live/smartexpo.bitallium.com/privkey.pem DOMAIN=smartexpo.bitallium.com node index.js"
   },
   "dependencies": {
     "@sitespeed.io/throttle": "^0.5.4",
